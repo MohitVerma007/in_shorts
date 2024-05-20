@@ -16,11 +16,11 @@ app.use(passport.initialize());
 
 //import routes
 const authRoutes = require("./src/routes/auth");
-const mathRoutes = require("./src/routes/math_course");
+const blogRoutes = require("./src/routes/blog");
 
 //initialize routes
-app.use("/api/auth", authRoutes);
-app.use("/api/v1/maths", mathRoutes);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/blog", blogRoutes);
 
 //app start
 const appStart = () => {
