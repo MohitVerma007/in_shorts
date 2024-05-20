@@ -79,7 +79,7 @@ exports.updateBlog = async (req, res, formattedFileUrls) => {
     const updateFields = {
       title: title || existingBlog.rows[0].title,
       description: description || existingBlog.rows[0].description,
-      featured_img: cover_img || existingBlog.rows[0].cover_img,
+      cover_img: cover_img || existingBlog.rows[0].cover_img,
     };
 
     await db.query(
