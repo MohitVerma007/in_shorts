@@ -84,7 +84,7 @@ exports.updateBlog = async (req, res, formattedFileUrls) => {
 
     await db.query(
       `UPDATE blog 
-       SET title = $1, description = $2, featured_img = $3
+       SET title = $1, description = $2, cover_img = $3
        WHERE id = $4`,
       [updateFields.title, updateFields.description, updateFields.cover_img, id]
     );
