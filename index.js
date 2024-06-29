@@ -17,10 +17,13 @@ app.use(passport.initialize());
 //import routes
 const authRoutes = require("./src/routes/auth");
 const blogRoutes = require("./src/routes/blog");
+const mailRoutes = require("./src/routes/userRoute");
+
 
 //initialize routes
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/blog", blogRoutes);
+app.use("/api/v1/mail", mailRoutes);
 
 //app start
 const appStart = () => {
