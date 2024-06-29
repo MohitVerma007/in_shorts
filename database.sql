@@ -15,3 +15,14 @@ CREATE TABLE blog (
     description TEXT,
     created_at date default current_date
 );
+
+
+CREATE TABLE messages (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(10) DEFAULT 'unseen' CHECK (status IN ('seen', 'unseen')),
+    seen_date TIMESTAMP
+);
