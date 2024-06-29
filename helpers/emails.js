@@ -13,11 +13,11 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-const sendSignUpMail = async(name, email, content)=>{
+const sendSignUpMail = async(name, email, content, url)=>{
 
     try {
 
-        ejs.renderFile(path.join(__dirname, '../views/templates/signup.ejs'), { name, content }, (err, data) => {
+        ejs.renderFile(path.join(__dirname, '../views/templates/signup.ejs'), { name, content, url }, (err, data) => {
             if (err) {
                 console.log(err);
             } 
